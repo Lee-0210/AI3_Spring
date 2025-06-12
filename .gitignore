@@ -1,0 +1,18 @@
+# Maven
+**/target/
+
+# Gradle
+**/build/
+
+# IntelliJ IDEA
+**/.idea/
+**/*.iml
+
+# Eclipse
+**/.classpath
+**/.project
+**/.settings/
+
+# OS별
+.DS_Store
+Thumbs.db
