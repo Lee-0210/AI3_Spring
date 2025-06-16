@@ -1,5 +1,7 @@
 package com.aloha.spring.dto;
 
+import java.util.List;
+
 import lombok.Data;
 /**
  * 기본 생성자
@@ -12,4 +14,8 @@ public class Person {
 
 	private String name;
 	private int age;
+	
+	// 요청 파라미터의 이름과 컨트롤러 메서드의 파라미터 이름이 같으면,
+	// 객체 안의 변수에 자동 바인딩 
+	private List<String> hobby;
 }

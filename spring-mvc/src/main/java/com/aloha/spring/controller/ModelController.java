@@ -28,7 +28,7 @@ public class ModelController {
 	 * 		Person.age 	<--- 20
 	 */
 	@RequestMapping("/person")	// method: GET(기본값)
-	public String person(Model model, Person person, @RequestParam("name") String name) {
+	public String person(Model model, Person person) {
 		// Model 인터페이스의 addAttribute() 메소드로 데이터를 등록하여, 뷰에 전달한다.
 		// Model 
 		// : 컨트롤러에서 등록한 데이터를 뷰에 전달하는 인터페이스
@@ -38,7 +38,6 @@ public class ModelController {
 		
 		// addAttribute("변수명", 객체) 메소드로 모델에 객체를 등록한다.
 		// model.addAttribute("person", person);
-		model.addAttribute("paramName", name);	
 		model.addAttribute(person);				// 변수명을 생략하면 객체명과 일치하는 이름으로 접근할 수 있다.
 												// view 에서 ${} (표현언어) 로 사용할 수 있다.
 												// ${person.name}, ${person.age}
